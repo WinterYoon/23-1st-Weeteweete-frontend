@@ -30,17 +30,64 @@
    - Back-End : Python, Django web framework, Bcrypt, My SQL, RESTful API<br/>
    - Common : RESTful API, trello <br/>
 
-   ## 구현 기능 - 내가 구현한 기능 체크 표시
+   ## 구현 기능 - 내가 구현한 기능 ✅ 표시
    - 필수구현
-	   - [x] 로그인 / 회원가입
-	   - [ ] 제품 리스트 페이지
-	   - [ ] 상세 페이지
-	   - [x] 결제 페이지
-	   - [ ] 장바구니
+	   - 로그인 / 회원가입 ✅
+	   - 제품 리스트 페이지
+	   - 상세 페이지
+	   - 결제 페이지 ✅
+	   - 장바구니
    - 추가구현
-	   - [x] 아이디 / 비밀번호 찾기
-	   - [ ] 상품 리뷰
-	   - [ ] 재고 수량
+	   - 아이디 / 비밀번호 찾기 ✅
+	   - 상품 리뷰
+	   - 재고 수량
+
+> 토글 버튼을 누르면 동작 화면과 자세한 설명을 볼 수 있습니다.
+
+<details>
+<summary>로그인 / 회원가입</summary>
+<div markdown="1">       
+
+![](https://images.velog.io/images/winter_ya/post/eb9781fa-c32c-499a-847f-e79effd47c52/ezgif.com-gif-maker%20(5).gif)
+- 회원가입 시 유효성 검사
+	
+	- 유효성 검사를 만족하는 경우 서버에 정보를 넘겨줍니다.
+	- 유효성 검사를 만족하지 못하는 경우 서버에게 정보를 넘겨주지 않고 경고창을 띄웁니다. 
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/84803633/139050949-7781eae6-455c-4a63-9dc1-07b7adfa7fe0.gif)<br/>
+- 로그인
+	- RESTful API를 호출하며 POST 요청을 합니다. 
+	- 서버에서 토큰을 발급해주면 localStorage에 저장합니다. 
+
+</div>
+</details>
+	  
+<details>
+<summary>아이디 찾기 및 비밀번호 찾기(임시 비밀번호)</summary>
+<div markdown="1">       
+
+![ezgif com-gif-maker (3)](https://user-images.githubusercontent.com/84803633/139050988-08c007f1-5b0f-4541-b761-87436c587621.gif)<br/>
+- 아이디 찾기
+	- RESTful API를 호출하여 POST 요청을 합니다.
+	- 서버에서 내가 입력한 이름과 이메일에 등록되어 있는 회원정보에 있는 아이디를 받습니다.
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/84803633/139051014-5f94a825-b011-42dc-b5bc-6be4e715e5b1.gif)<br/>
+- 비밀번호 찾기
+	- 아이디 찾기와 비슷한 레이아웃을 가지고 있어 컴포넌트를 재사용하였습니다.
+	- RESTful API를 호출하여 PATCH 요청을 합니다. 
+	- 서버에서 내가 입력한 아이디, 이름, 이메일에 등록되어 있는 회원정보에 있는 비밀번호를 삭제한 후 발급한 임시 비밀번호를 받습니다.  
+
+
+</div>
+</details>
+<details>
+<summary>결제 페이지</summary>
+<div markdown="1">       
+
+![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/84803633/139051126-253843a8-124e-483b-a7a0-c8ed795d8f20.gif)
+- 결제 페이지
+
+
+</div>
+</details>
 
 
 
