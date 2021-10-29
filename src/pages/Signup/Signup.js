@@ -39,7 +39,7 @@ class Signup extends React.Component {
   };
 
   signupTest = () => {
-    // if (this.testValidation()) {
+    if (this.testValidation()) {
     fetch(`${BASE_URL}/users/signup`, {
       method: 'POST',
       body: JSON.stringify({
@@ -60,9 +60,9 @@ class Signup extends React.Component {
           alert('회원가입 실패!');
         }
       });
-    // } else {
-    //   return alert('회원가입 조건을 지켜주세요!');
-    // }
+     } else {
+       return alert('회원가입 조건을 지켜주세요!');
+     }
   };
 
   render() {
